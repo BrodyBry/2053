@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2051</title>
+  
+  
+  
+  
+<style>
+body {
+  color:yellow;
+  background-color: lightblue;
+ background-repeat:no-repeat;
+  background-image: 
+url(https://image-cdn.essentiallysports.com/wp-content/uploads/20200315133039/LA-Lakers-1600x1066.jpg)
+    
+}
+.column{
+  position:absolute;
+  left:83.9%;
+  top:2%;
+}
+.row:after {
+ content:absolute;
+  left:10%;
+}
+}
+
+
+
+
+.correct {
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}
+}
+#timerdiv{
+  color:white;
+}
+
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <h1>Brody's Basketball Quiz!</h1>
+<ol>
+  <li>Who Averges the Most Points in the NBA? <input  data-correct="James Harden"/></li>
+  <li>Who Won Defensive Player of the Year? <input  data-correct="Giannis Antetokounmpo"/></li>
+  <li>Who Won Rookie of the Year? <input data-correct="Ja Morant"/></li>
+    <li>Who is the NBA Commissioner? <input data-correct="Adam Silver"/></li>
+  <li>Who Averges the Most Rebounds in the NBA? <input  data-correct="Andre Drummond"/></li>
+  <li>What Team had the Best Record? <input  data-correct="The Milwaukee Bucks"/></li>
+  <li>What Team had the Worst Record? <input  data-correct="The Golden State Warriors"/></li>
+  <li>Who Won the NBA Championship Last Year? <input  data-correct="The Toronto Raptors"/></li>
+  <li>Who is the new Head Coach of the New Jersey Nets? <input  data-correct="Steve Nash"/></li>
+  <li>Who is the starting Shooting Gaurd for the Los Angeles Clippers? <input  data-correct="Paul George"/></li>
+</ol>  
+<div id="timerdiv">
+  Timer: <span id="timer">0</span>
+  </div>
+<!DOCTYPE html>
+<html>
+<body>
+  <audio id="goodjob">
+  <source src="https://brodybry.github.io/2053-7/Background%20Music.mp3" type="audio/mpeg"
+type="audio/mpeg">
+</audio>
+<button id="pressme">Play Backgroun Music!</button>
+
+<h1></h1>
+
+
+    </audio>
+
+<html>
+<body>
+
+<h1></h1>
+
+
+  
+
+
+
+
+   <div class="row">
+  <div class="column">
+    <img src="https://image-cdn.essentiallysports.com/wp-content/uploads/20200522184855/james-harden-.jpeg" alt="Snow" width="300" style=  "height:200">
+  </div>
+     
+  <div class="column">
+    <img src="https://img.huffingtonpost.com/asset/5d032e00210000a718f234db.jpeg?ops=scalefit_720_noupscale" alt="Forest" width="300"style="width:300">
+  </div>
+ 
+     <div class="column">
+    <img src="https://thememphian.blob.core.windows.net/sized/33504_960" alt="Mountains" width=300 style=
+  </div>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+let timer = 0;
+function addSecond(){
+  timer = timer + 1;
+  $("#timer").text(timer);
+}
+
+setInterval(addSecond, 1000)
+
+
+let goodjob = document.getElementById("goodjob")
+
+function playGoodJob(evt){
+  goodjob.play();
+}
+$("#pressme").click(playGoodJob);
+
+console.clear();
+
+$("input").change(onChange)
+
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  correct = correct.toUpperCase();
+  response = response.toUpperCase();
+
+  console.log(correct,response);
+  if(correct == response){
+   $(this).removeClass('incorrect').addClass('correct');
+  } else{
+    $(this).removeClass('correct').addClass('incorrect');
+  }
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
